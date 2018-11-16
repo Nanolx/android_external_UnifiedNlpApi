@@ -20,6 +20,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
+import android.util.Log;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -66,9 +67,9 @@ public abstract class HelperLocationBackendService extends LocationBackendServic
     }
 
     @Override
-    protected synchronized Location update(List<String> options) {
+    protected synchronized Location update() {
         for (AbstractBackendHelper helper : helpers) {
-            helper.onUpdate(options);
+            helper.onUpdate();
         }
         return null;
     }

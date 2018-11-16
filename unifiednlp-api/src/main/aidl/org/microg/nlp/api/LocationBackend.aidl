@@ -6,7 +6,7 @@ import android.location.Location;
 
 interface LocationBackend {
     void open(LocationCallback callback);
-    Location update(in List<String> options);
+    Location update();
     void close();
     Intent getInitIntent();
     Intent getSettingsIntent();

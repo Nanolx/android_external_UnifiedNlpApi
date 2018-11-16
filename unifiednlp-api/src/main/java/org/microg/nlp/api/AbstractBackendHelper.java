@@ -17,7 +17,6 @@
 package org.microg.nlp.api;
 
 import android.content.Context;
-import java.util.List;
 
 public class AbstractBackendHelper {
     protected final Context context;
@@ -56,7 +55,7 @@ public class AbstractBackendHelper {
     /**
      * Call this in {@link org.microg.nlp.api.LocationBackendService#update()}.
      */
-    public synchronized void onUpdate(List<String> options) {
+    public synchronized void onUpdate() {
     }
 
     public String[] getRequiredPermissions() {
